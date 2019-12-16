@@ -17,7 +17,7 @@ resource "aws_instance" "web" {
   connection {
     type     = "ssh"
     user     = "ubuntu"
-    private_key = "${file("key.pem")}"
+    private_key = "${file("/home/terraform/workspace/upstream/terraform/key.pem")}"
     host     = "${aws_instance.web.public_ip}"
   }
 }
