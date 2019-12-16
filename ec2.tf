@@ -11,7 +11,7 @@ resource "aws_instance" "web" {
   }
   provisioner "remote-exec" {
     inline = [
-     "sudo apt-get update","sudo apt-get install tomcat8 -y","sudo cd /var/lib/tomcat8/webapps", "curl -u admin:password -O "http://54.202.1.182:8081/artifactory/gol/*""
+     "sudo apt-get update","sudo apt-get install tomcat8 -y","sudo cd /var/lib/tomcat8/webapps", "curl -u admin:password -O http://54.202.1.182:8081/artifactory/gol/*"
     ]
   
   connection {
